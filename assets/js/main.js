@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -114,7 +114,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -123,7 +123,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -133,7 +133,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -220,6 +220,7 @@
 
 })()
 
+// Java Script Dropdown Paket  Harga
 document.addEventListener('DOMContentLoaded', function () {
   const packageFilter = document.getElementById('package-filter');
   const packageBoxes = document.querySelectorAll('.box');
@@ -250,3 +251,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+// Disable fungsi" keyboard dan klik kanan mouse
+
+// disable right click
+// document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function (e) {
+
+  // disable F12 key
+  if (e.keyCode == 123) {
+    return false;
+  }
+
+  // disable I key
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+    return false;
+  }
+
+  // disable J key
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+    return false;
+  }
+
+  // disable U key
+  if (e.ctrlKey && e.keyCode == 85) {
+    return false;
+  }
+}
