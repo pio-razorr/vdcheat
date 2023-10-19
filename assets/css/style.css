@@ -452,7 +452,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #17b57d;
+  background: #1acc8e84;
 }
 
 #hero .btn-get-youtube {
@@ -469,24 +469,7 @@ h6 {
 }
 
 #hero .btn-get-youtube:hover {
-  background: #b51717;
-}
-
-#hero .btn-get-telegram {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #fff;
-  background: #4BA9E1;
-}
-
-#hero .btn-get-telegram:hover {
-  background: #4BA9E1;
+  background: #ff000086;
 }
 
 #hero .animated {
