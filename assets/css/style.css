@@ -472,6 +472,23 @@ h6 {
   background: #b51717;
 }
 
+#hero .btn-get-telegram {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #4BA9E1;
+}
+
+#hero .btn-get-telegram:hover {
+  background: #4BA9E1;
+}
+
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
   width: 450px;
