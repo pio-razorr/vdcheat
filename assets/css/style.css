@@ -1,6 +1,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #34e5a6;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
