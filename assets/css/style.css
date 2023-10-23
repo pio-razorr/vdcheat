@@ -477,8 +477,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
-  width: 450px;
-  height: 315px;
+  /* width: 450px;
+  height: 315px; */
 }
 
 @media (min-width: 1024px) {
