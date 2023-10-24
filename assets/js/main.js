@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Disable fungsi" keyboard dan klik kanan mouse
 
 // disable right click
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.onkeydown = function (e) {
 
