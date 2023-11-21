@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: url("../img/hero-bg.webp");
+  background: url("../img/hero-bg-1.webp");
   position: relative;
   padding: 120px 0 0 0;
 }
@@ -995,7 +995,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/hero-bg.jpg") no-repeat;
+  background: url("../img/hero-bg-1.webp") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
