@@ -30,6 +30,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+
+  <link rel="stylesheet" href="assets/compiled/css/table-datatable-jquery.css">
+
 </head>
 
 <body>
@@ -593,8 +597,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-              <a href="assets/img/gallery/pubgm-1.webp" class="gallery-lightbox"
-                data-description="PUBG MOBILE">
+              <a href="assets/img/gallery/pubgm-1.webp" class="gallery-lightbox" data-description="PUBG MOBILE">
                 <img src="assets/img/gallery/pubgm-1.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -602,8 +605,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-              <a href="assets/img/gallery/aov-1.webp" class="gallery-lightbox"
-                data-description="ARENA OF VALOR">
+              <a href="assets/img/gallery/aov-1.webp" class="gallery-lightbox" data-description="ARENA OF VALOR">
                 <img src="assets/img/gallery/aov-1.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -611,8 +613,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-              <a href="assets/img/gallery/8bp-1.webp" class="gallery-lightbox"
-                data-description="8 BALL POLL">
+              <a href="assets/img/gallery/8bp-1.webp" class="gallery-lightbox" data-description="8 BALL POLL">
                 <img src="assets/img/gallery/8bp-1.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -707,243 +708,394 @@
     <section id="pricing" class="pricing">
       <div class="container">
 
-        <div class="row section-title" data-aos="fade-up">
-          <div class="col-md-6">
-            <h2>Harga</h2>
-            <p>Harga paketan</p>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
-              <div>
-                <label for="package-filter" class="me-2">Pilih Paket :</label>
-                <select id="package-filter">
-                  <option value="mobile-legends">Mobile Legends</option>
-                  <option value="point-blank">Point Blank</option>
-                  <option value="point-blank-private">Point Blank Private</option>
-                </select>
-              </div>
-            </div>
-          </div>
+        <div class="section-title" data-aos="fade-up">
+          <h2>VVIP MODS</h2>
+          <p>HARGA PAKETAN</p>
         </div>
 
-        <div class="row" data-aos="fade-left">
-          <div class="col-lg-3 col-md-6">
-            <div class="box rounded-5" data-aos="zoom-in" data-aos-delay="100" data-package="mobile-legends">
-              <h3>Mobile Legends</h3>
-              <h4><sup>Rp.</sup>10.000</h4>
-              <ul>
-                <li>1 Hari</li>
-                <li>Paket icip</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Pharetra massa</li> -->
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20ML%20nya%201%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
+        <div class="row mb-5" data-aos="fade-left">
+          <table class="table table-striped table-bordered" id="daftar-harga">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Game</th>
+                <th>Paket</th>
+                <th>Harga</th>
+              </tr>
+            </thead>
+            <tbody>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-aos-delay="200" data-package="mobile-legends">
-              <span class="advanced">Best seller</span>
-              <h3>Mobile Legends</h3>
-              <h4><sup>Rp.</sup>25.000</h4>
-              <ul>
-                <li>3 + <u><em>bonus 1 Hari</em></u></li>
-                <li>Paket pas</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20ML%20nya%203%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
+              <!-- Data Mobile Legends -->
+            
+              <tr>
+                <td>1</td>
+                <td>Mobile Legends</td> 
+                <td>3 Hari</td>
+                <td>Rp. 25.000</td>
+              </tr>
+            
+              <tr>
+                <td>2</td>
+                <td>Mobile Legends</td>
+                <td>7 Hari</td> 
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>3</td>
+                <td>Mobile Legends</td>
+                <td>30 Hari</td>
+                <td>Rp. 100.000</td> 
+              </tr>
+            
+              <tr>
+                <td>4</td>
+                <td>Mobile Legends</td>
+                <td>60 Hari</td>
+                <td>Rp. 175.000</td>
+              </tr>
+            
+              <tr>
+               <td>5</td>
+               <td>Mobile Legends</td>
+               <td>90 Hari</td>
+               <td>Rp. 250.000</td>
+              </tr>
+            
+              <tr>
+                <td>6</td>
+                <td>Mobile Legends</td>
+                <td>120 Hari</td>
+                <td>Rp. 325.000</td>
+              </tr>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-aos-delay="300" data-package="mobile-legends">
-              <h3>Mobile Legends</h3>
-              <h4><sup>Rp.</sup>50.000</h4>
-              <ul>
-                <li>7 + <u><em>bonus</em> 2 Hari</u></li>
-                <li>Paket nagih</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li>Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20ML%20nya%207%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-aos-delay="400" data-package="mobile-legends">
-              <span class="advanced">Advanced</span>
-              <h3>Mobile Legends</h3>
-              <h4><sup>Rp.</sup>100.000</h4>
-              <ul>
-                <li>30 + <u><em>bonus</em> 5 Hari</u></li>
-                <li>Paket hemat</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li>Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20ML%20nya%2030%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
+              <!-- Data Point Blank Zepetto -->
+            
+              <tr>
+                <td>7</td>
+                <td>Point Blank Zepetto</td>
+                <td>1 Hari</td>
+                <td>Rp. 10.000</td>
+              </tr>
+            
+              <tr>
+                <td>8</td>
+                <td>Point Blank Zepetto</td> 
+                <td>2 Hari</td>
+                <td>Rp. 15.000</td>
+              </tr>
+            
+              <tr>
+                <td>9</td>
+                <td>Point Blank Zepetto</td>
+                <td>3 + 2 Hari</td> 
+                <td>Rp. 25.000</td>
+              </tr>
+            
+              <tr>
+                <td>10</td>
+                <td>Point Blank Zepetto</td>
+                <td>7 + 3 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>11</td>
+                <td>Point Blank Zepetto</td>
+                <td>14 + 4 Hari</td>
+                <td>Rp. 70.000</td>
+              </tr>
+            
+              <tr>
+                <td>12</td>
+                <td>Point Blank Zepetto</td>
+                <td>21 + 5 Hari</td>
+                <td>Rp. 90.000</td>
+              </tr>
+            
+              <tr>
+                <td>13</td>
+                <td>Point Blank Zepetto</td>
+                <td>30 + 6 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>14</td>
+                <td>Point Blank Zepetto</td>
+                <td>60 + 7 Hari</td>
+                <td>Rp. 180.000</td>
+              </tr>
+            
+              <tr>
+                <td>15</td>
+                <td>Point Blank Zepetto</td>
+                <td>90 + 8 Hari</td>
+                <td>Rp. 250.000</td>
+              </tr>
+            
+              <!-- Data PUBG Mobile -->
+            
+              <tr>
+                <td>16</td>
+                <td>PUBG Mobile</td>
+                <td>3 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>17</td>
+                <td>PUBG Mobile</td>
+                <td>7 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>18</td>
+                <td>PUBG Mobile</td>
+                <td>30 Hari</td>
+                <td>Rp. 150.000</td>
+              </tr>
+            
+              <!-- Data PUBG Emulator -->
+            
+              <tr>
+                <td>19</td>
+                <td>PUBG Emulator</td>
+                <td>1 Hari</td>
+                <td>Rp. 20.000</td>
+              </tr>
+            
+              <tr>
+                <td>20</td>
+                <td>PUBG Emulator</td>
+                <td>3 Hari</td>
+                <td>Rp. 35.000</td>
+              </tr>
+            
+              <tr>
+                <td>21</td>
+                <td>PUBG Emulator</td>
+                <td>7 Hari</td>
+                <td>Rp. 75.000</td>
+              </tr>
+            
+              <tr>
+                <td>22</td>
+                <td>PUBG Emulator</td>
+                <td>14 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>23</td> 
+                <td>PUBG Emulator</td>
+                <td>30 Hari</td>
+                <td>Rp. 150.000</td>
+              </tr>
+            
+              <!-- Data COD Mobile -->
+            
+              <tr>
+                <td>24</td>
+                <td>COD Mobile</td> 
+                <td>3 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>25</td>
+                <td>COD Mobile</td>
+                <td>7 Hari</td> 
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>26</td>
+                <td>COD Mobile</td>
+                <td>30 Hari</td>
+                <td>Rp. 150.000</td>
+              </tr>
+            
+              <tr>
+                <td>27</td>
+                <td>COD Mobile</td>
+                <td>60 Hari</td>
+                <td>Rp. 300.000</td>
+              </tr>
+            
+              <!-- Data 8 Ball Pool -->
+            
+              <tr>
+                <td>28</td>
+                <td>8 Ball Pool</td>
+                <td>3 Hari</td>
+                <td>Rp. 25.000</td>
+              </tr>
+            
+              <tr>
+                <td>29</td>
+                <td>8 Ball Pool</td>
+                <td>7 Hari</td> 
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>30</td>
+                <td>8 Ball Pool</td>
+                <td>30 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <!-- Data Arena of Valor -->
+            
+              <tr>
+                <td>31</td>
+                <td>Arena Of Valor</td>
+                <td>3 Hari</td>
+                <td>Rp. 25.000</td>
+              </tr>
+              
+              <tr>
+                <td>32</td>
+                <td>Arena Of Valor</td>
+                <td>7 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>33</td>
+                <td>Arena Of Valor</td> 
+                <td>30 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <!-- Data Lost Saga Origin VIP -->
+            
+              <tr>
+                <td>34</td>
+                <td>Lost Saga Origin VIP</td>
+                <td>1 Hari</td> 
+                <td>Rp. 30.000</td>
+              </tr>
+            
+              <tr>
+                <td>35</td>
+                <td>Lost Saga Origin VIP</td>
+                <td>3 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+              
+              <tr>
+                <td>36</td>
+                <td>Lost Saga Origin VIP</td>
+                <td>7 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <!-- Data Lost Saga Origin VVIP -->
+            
+              <tr>
+                <td>37</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>3 Hari</td>
+                <td>Rp. 25.000</td>
+              </tr>
+            
+              <tr>
+                <td>38</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>7 Hari</td> 
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>39</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>30 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>40</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>60 Hari</td>
+                <td>Rp. 175.000</td>
+              </tr>
+            
+              <tr>
+                <td>41</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>90 Hari</td>
+                <td>Rp. 250.000</td>
+              </tr>
+            
+              <tr>
+                <td>42</td>
+                <td>Lost Saga Origin VVIP</td>
+                <td>120 Hari</td>
+                <td>Rp. 325.000</td>
+              </tr>
+            
+              <!-- Data Farlight 84 -->
+            
+              <tr>
+                <td>43</td>
+                <td>Farlight 84</td>
+                <td>3 Hari</td>
+                <td>Rp. 50.000</td>
+              </tr>
+            
+              <tr>
+                <td>44</td>
+                <td>Farlight 84</td> 
+                <td>7 Hari</td>
+                <td>Rp. 100.000</td>
+              </tr>
+            
+              <tr>
+                <td>45</td>
+                <td>Farlight 84</td>
+                <td>30 Hari</td>
+                <td>Rp. 150.000</td>
+              </tr>
+            
+              <!-- Data Forward Assault -->
+            
+              <tr>
+                <td>46</td>
+                <td>Forward Assault</td>
+                <td>3 Hari</td> 
+                <td>Rp. 25.000</td>
+              </tr>
+            
+              <tr>
+                <td>47</td>
+                <td>Forward Assault</td> 
+                <td>7 Hari</td>
+                <td>Rp. 50.000</td> 
+              </tr>
+            
+              <tr>
+                <td>48</td>
+                <td>Forward Assault</td>
+                <td>14 Hari</td>
+                <td>Rp. 75.000</td>
+              </tr>
+            
+              <tr>
+                <td>49</td>
+                <td>Forward Assault</td>
+                <td>30 Hari</td> 
+                <td>Rp. 100.000</td>
+              </tr>
+            
+            </tbody>
+          </table>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank">
-              <h3>Point Blank</h3>
-              <h4><sup>Rp.</sup>10.000</h4>
-              <ul>
-                <li>1 Hari</li>
-                <li>Paket icip</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Pharetra massa</li> -->
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%201%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank">
-              <span class="advanced">Best seller</span>
-              <h3>Point Blank</h3>
-              <h4><sup>Rp.</sup>25.000</h4>
-              <ul>
-                <li>3 + <u><em>bonus</em> 1 Hari</u></li>
-                <li>Paket pas</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%203%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank">
-              <h3>Point Blank</h3>
-              <h4><sup>Rp.</sup>50.000</h4>
-              <ul>
-                <li>7 + <u><em>bonus</em> 2 Hari</u></li>
-                <li>Paket nagih</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li>Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%207%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank">
-              <span class="advanced">Advanced</span>
-              <h3>Point Blank</h3>
-              <h4><sup>Rp.</sup>100.000</h4>
-              <ul>
-                <li>30 + <u><em>bonus</em> 5 Hari</u></li>
-                <li>Paket hemat</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li>Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%2030%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank-private">
-              <h3>Point Blank Private</h3>
-              <h4><sup>Rp.</sup>25.000</h4>
-              <ul>
-                <li>3 + <u><em>bonus 1 Hari</em></u></li>
-                <li>Paket pas</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Pharetra massa</li> -->
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%201%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank-private">
-              <span class="advanced">Best seller</span>
-              <h3>Point Blank Private</h3>
-              <h4><sup>Rp.</sup>50.000</h4>
-              <ul>
-                <li>10 + <u><em>bonus</em> 5 Hari</u></li>
-                <li>Paket nagih</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li class="na">Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%203%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box rounded-5" data-aos="zoom-in" data-package="point-blank-private">
-              <span class="advanced">Advanced</span>
-              <h3>Point Blank Private</h3>
-              <h4><sup>Rp.</sup>100.000</h4>
-              <ul>
-                <li>30 + <u><em>bonus</em> 5 Hari</u></li>
-                <li>Paket hemat</li>
-                <li>Full garansi</li>
-                <li>Customer service 24/7</li>
-                <!-- <li>Massa ultricies mi</li> -->
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://wa.me/+6282220000230?text=Mau%20order%20cheat%20PB%20nya%2030%20hari%20min"
-                  target="_blank" class="btn-buy">Pesan sekarang</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
-    <!-- End Pricing Section -->
+    <!-- End Features Section -->
 
     <!-- ======= Tentang ======= -->
     <!-- <section id="tentang" class="team">
@@ -1269,8 +1421,19 @@
       class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- JS Datatable -->
-  <!-- <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script> -->
+
+  <!-- Datatable -->
+  <script src="assets/extensions/jquery/jquery.min.js"></script>
+  <script src="assets/extensions/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+  <script src="assets/static/js/pages/datatables.js"></script>
+
+  {{-- Inisialisasi DataTable --}}
+  <script>
+      $(document).ready(function() {
+          $('#daftar-harga').DataTable();
+      });
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -1282,6 +1445,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
