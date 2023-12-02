@@ -1,1 +1,214 @@
-!function(){"use strict";let e=(e,t=!1)=>(e=e.trim(),t)?[...document.querySelectorAll(e)]:document.querySelector(e),t=(t,l,s,a=!1)=>{let i=e(l,a);i&&(a?i.forEach(e=>e.addEventListener(t,s)):i.addEventListener(t,s))},l=(e,t)=>{e.addEventListener("scroll",t)},s=e("#navbar .scrollto",!0),a=()=>{let t=window.scrollY+200;s.forEach(l=>{if(!l.hash)return;let s=e(l.hash);s&&(t>=s.offsetTop&&t<=s.offsetTop+s.offsetHeight?l.classList.add("active"):l.classList.remove("active"))})};window.addEventListener("load",a),l(document,a);let i=t=>{let l=e("#header"),s=l.offsetHeight;l.classList.contains("header-scrolled")||(s-=20);let a=e(t).offsetTop;window.scrollTo({top:a-s,behavior:"smooth"})},o=e("#header");if(o){let n=()=>{window.scrollY>100?o.classList.add("header-scrolled"):o.classList.remove("header-scrolled")};window.addEventListener("load",n),l(document,n)}let r=e(".back-to-top");if(r){let c=()=>{window.scrollY>100?r.classList.add("active"):r.classList.remove("active")};window.addEventListener("load",c),l(document,c)}t("click",".mobile-nav-toggle",function(t){e("#navbar").classList.toggle("navbar-mobile"),this.classList.toggle("bi-list"),this.classList.toggle("bi-x")}),t("click",".navbar .dropdown > a",function(t){e("#navbar").classList.contains("navbar-mobile")&&(t.preventDefault(),this.nextElementSibling.classList.toggle("dropdown-active"))},!0),t("click",".scrollto",function(t){if(e(this.hash)){t.preventDefault();let l=e("#navbar");if(l.classList.contains("navbar-mobile")){l.classList.remove("navbar-mobile");let s=e(".mobile-nav-toggle");s.classList.toggle("bi-list"),s.classList.toggle("bi-x")}i(this.hash)}},!0),window.addEventListener("load",()=>{window.location.hash&&e(window.location.hash)&&i(window.location.hash)});let d=e("#preloader");d&&window.addEventListener("load",()=>{d.remove()}),GLightbox({selector:".glightbox"}),GLightbox({selector:".gallery-lightbox"}),new Swiper(".testimonials-slider",{speed:600,loop:!0,autoplay:{delay:5e3,disableOnInteraction:!1},slidesPerView:"auto",pagination:{el:".swiper-pagination",type:"bullets",clickable:!0}}),window.addEventListener("load",()=>{AOS.init({duration:1e3,easing:"ease-in-out",once:!0,mirror:!1})}),new PureCounter}(),document.addEventListener("contextmenu",e=>e.preventDefault()),document.onkeydown=function(e){if(123==e.keyCode||e.ctrlKey&&e.shiftKey&&73==e.keyCode||e.ctrlKey&&e.shiftKey&&74==e.keyCode||e.ctrlKey&&85==e.keyCode)return!1};
+(function() {
+    "use strict";
+  
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+      el = el.trim()
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
+      }
+    }
+  
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+      let selectEl = select(el, all)
+      if (selectEl) {
+        if (all) {
+          selectEl.forEach(e => e.addEventListener(type, listener))
+        } else {
+          selectEl.addEventListener(type, listener)
+        }
+      }
+    }
+  
+    /**
+     * Easy on scroll event listener 
+     */
+    const onscroll = (el, listener) => {
+      el.addEventListener('scroll', listener)
+    }
+  
+    /**
+     * Navbar links active state on scroll
+     */
+    let navbarlinks = select('#navbar .scrollto', true)
+    const navbarlinksActive = () => {
+      let position = window.scrollY + 200
+      navbarlinks.forEach(navbarlink => {
+        if (!navbarlink.hash) return
+        let section = select(navbarlink.hash)
+        if (!section) return
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+          navbarlink.classList.add('active')
+        } else {
+          navbarlink.classList.remove('active')
+        }
+      })
+    }
+    window.addEventListener('load', navbarlinksActive)
+    onscroll(document, navbarlinksActive)
+  
+    /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+      let header = select('#header')
+      let offset = header.offsetHeight
+  
+      if (!header.classList.contains('header-scrolled')) {
+        offset -= 20
+      }
+  
+      let elementPos = select(el).offsetTop
+      window.scrollTo({
+        top: elementPos - offset,
+        behavior: 'smooth'
+      })
+    }
+  
+    /**
+     * Toggle .header-scrolled class to #header when page is scrolled
+     */
+    let selectHeader = select('#header')
+    if (selectHeader) {
+      const headerScrolled = () => {
+        if (window.scrollY > 100) {
+          selectHeader.classList.add('header-scrolled')
+        } else {
+          selectHeader.classList.remove('header-scrolled')
+        }
+      }
+      window.addEventListener('load', headerScrolled)
+      onscroll(document, headerScrolled)
+    }
+  
+    /**
+     * Back to top button
+     */
+    let backtotop = select('.back-to-top')
+    if (backtotop) {
+      const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+          backtotop.classList.add('active')
+        } else {
+          backtotop.classList.remove('active')
+        }
+      }
+      window.addEventListener('load', toggleBacktotop)
+      onscroll(document, toggleBacktotop)
+    }
+  
+    /**
+     * Mobile nav toggle
+     */
+    on('click', '.mobile-nav-toggle', function(e) {
+      select('#navbar').classList.toggle('navbar-mobile')
+      this.classList.toggle('bi-list')
+      this.classList.toggle('bi-x')
+    })
+  
+    /**
+     * Mobile nav dropdowns activate
+     */
+    on('click', '.navbar .dropdown > a', function(e) {
+      if (select('#navbar').classList.contains('navbar-mobile')) {
+        e.preventDefault()
+        this.nextElementSibling.classList.toggle('dropdown-active')
+      }
+    }, true)
+  
+    /**
+     * Scrool with ofset on links with a class name .scrollto
+     */
+    on('click', '.scrollto', function(e) {
+      if (select(this.hash)) {
+        e.preventDefault()
+  
+        let navbar = select('#navbar')
+        if (navbar.classList.contains('navbar-mobile')) {
+          navbar.classList.remove('navbar-mobile')
+          let navbarToggle = select('.mobile-nav-toggle')
+          navbarToggle.classList.toggle('bi-list')
+          navbarToggle.classList.toggle('bi-x')
+        }
+        scrollto(this.hash)
+      }
+    }, true)
+  
+    /**
+     * Scroll with ofset on page load with hash links in the url
+     */
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        if (select(window.location.hash)) {
+          scrollto(window.location.hash)
+        }
+      }
+    });
+  
+    /**
+     * Preloader
+     */
+    let preloader = select('#preloader');
+    if (preloader) {
+      window.addEventListener('load', () => {
+        preloader.remove()
+      });
+    }
+  
+    /**
+     * Initiate glightbox
+     */
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  
+    /**
+     * Initiate gallery lightbox 
+     */
+    const galleryLightbox = GLightbox({
+      selector: '.gallery-lightbox'
+    });
+  
+    /**
+     * Testimonials slider
+     */
+    // new Swiper('.testimonials-slider', {
+    //   speed: 600,
+    //   loop: true,
+    //   autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false
+    //   },
+    //   slidesPerView: 'auto',
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //     clickable: true
+    //   }
+    // });
+  
+    /**
+     * Animation on scroll
+     */
+    window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      })
+    });
+  
+    /**
+     * Initiate Pure Counter 
+     */
+    new PureCounter();
+  
+  })()

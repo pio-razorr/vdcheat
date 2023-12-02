@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 55px;
   right: 15px;
-  /* bottom: 15px; */
+  bottom: 15px;
   left: 15px;
   padding: 10px 0;
   border-radius: 8px;
@@ -455,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #49a4e195;
+  background: #1acc8e84;
 }
 
 #hero .btn-get-youtube {
@@ -726,7 +726,7 @@ section {
 }
 
 .gallery .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /*--------------------------------------------------------------
@@ -769,6 +769,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
+  top: 14px;
   color: #34e5a6;
 }
 
