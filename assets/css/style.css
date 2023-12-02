@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
-#hero .btn-get-started {
+#hero .btn-get-telegram {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -454,8 +454,25 @@ h1, h2, h3, h4, h5, h6 {
   background: #49A4E1;
 }
 
-#hero .btn-get-started:hover {
-  background: #1acc8e84;
+#hero .btn-get-telegram:hover {
+  background: #0088CC;
+}
+
+#hero .btn-get-whatsapp {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #25D366;
+}
+
+#hero .btn-get-whatsapp:hover {
+  background: #128C7E;
 }
 
 #hero .btn-get-youtube {
@@ -468,11 +485,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: 0.5s;
   color: #fff;
-  background: #ff0000;
+  background: #EC2B00;
 }
 
 #hero .btn-get-youtube:hover {
-  background: #ff000086;
+  background: #91322f;
 }
 
 #hero .animated {
