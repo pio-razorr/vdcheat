@@ -460,7 +460,7 @@ h6 {
 }
 
 #hero .btn-get-telegram:hover {
-  background: #0088CC;
+  background: #49A4E184;
 }
 
 #hero .btn-get-tiktok {
@@ -477,7 +477,7 @@ h6 {
 }
 
 #hero .btn-get-tiktok:hover {
-  background: #353636;
+  background: #01010184;
 }
 
 #hero .btn-get-youtube {
@@ -490,11 +490,11 @@ h6 {
   border-radius: 50px;
   transition: 0.5s;
   color: #fff;
-  background: #EC2B00;
+  background: #ec0000;
 }
 
 #hero .btn-get-youtube:hover {
-  background: #91322f;
+  background: #ec000084;
 }
 
 #hero .animated {
@@ -955,4 +955,17 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+}
+
+/* Promo harga */
+.promo-text {
+  /* Warna teks merah */
+  color: red;
+  /* Ukuran font agak kecil (80% dari ukuran normal) */
+  font-size: 80%;
+  /* Teks tebal untuk menonjolkan promo */
+  font-weight: bold;
+  /* Menyesuaikan posisi vertikal ke atas */
+  vertical-align: top;
+
 }
