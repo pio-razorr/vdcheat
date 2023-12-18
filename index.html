@@ -1138,6 +1138,8 @@
       class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
+  <!-- Sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Datatable -->
   <script src="assets/extensions/jquery/jquery.min.js"></script>
@@ -1169,6 +1171,24 @@
     autoIncrementCells.forEach(function (cell, index) {
       cell.textContent = index + 1;
     });
+  </script>
+
+  <!-- Sweet alert -->
+  <script>
+    // Fungsi untuk menampilkan SweetAlert2 dengan penundaan 1 detik
+    function showPromoAlert() {
+      setTimeout(function () {
+        Swal.fire({
+          title: 'PROMO DESEMBER !!!',
+          text: 'Kami sedang mengadakan promo desember ceria.',
+          icon: 'warning',
+          confirmButtonText: 'OK'
+        });
+      }, 3500); // Penundaan selama 3,5 detik (3500 milidetik)
+    }
+
+    // Panggil fungsi showPromoAlert saat dokumen selesai dimuat
+    document.addEventListener("DOMContentLoaded", showPromoAlert);
   </script>
 
 </body>
