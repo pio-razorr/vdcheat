@@ -470,8 +470,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="900">
-              <a href="assets/img/gallery/lsovvip-2.webp" class="gallery-lightbox"
-                data-description="LOST SAGA ORIGIN">
+              <a href="assets/img/gallery/lsovvip-2.webp" class="gallery-lightbox" data-description="LOST SAGA ORIGIN">
                 <img src="assets/img/gallery/lsovvip-2.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -479,8 +478,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="950">
-              <a href="assets/img/gallery/lsovvip-3.webp" class="gallery-lightbox"
-                data-description="LOST SAGA ORIGIN">
+              <a href="assets/img/gallery/lsovvip-3.webp" class="gallery-lightbox" data-description="LOST SAGA ORIGIN">
                 <img src="assets/img/gallery/lsovvip-3.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -488,8 +486,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1000">
-              <a href="assets/img/gallery/lsovvip-4.webp" class="gallery-lightbox"
-                data-description="LOST SAGA ORIGIN">
+              <a href="assets/img/gallery/lsovvip-4.webp" class="gallery-lightbox" data-description="LOST SAGA ORIGIN">
                 <img src="assets/img/gallery/lsovvip-4.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -497,8 +494,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1050">
-              <a href="assets/img/gallery/contra-1.webp" class="gallery-lightbox"
-                data-description="CONTRA TOURNAMENT">
+              <a href="assets/img/gallery/contra-1.webp" class="gallery-lightbox" data-description="CONTRA TOURNAMENT">
                 <img src="assets/img/gallery/contra-1.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -506,8 +502,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1050">
-              <a href="assets/img/gallery/contra-2.webp" class="gallery-lightbox"
-                data-description="CONTRA TOURNAMENT">
+              <a href="assets/img/gallery/contra-2.webp" class="gallery-lightbox" data-description="CONTRA TOURNAMENT">
                 <img src="assets/img/gallery/contra-2.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -515,8 +510,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1050">
-              <a href="assets/img/gallery/f84-1.webp" class="gallery-lightbox"
-                data-description="FARLIGHT 84">
+              <a href="assets/img/gallery/f84-1.webp" class="gallery-lightbox" data-description="FARLIGHT 84">
                 <img src="assets/img/gallery/f84-1.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -524,8 +518,7 @@
 
           <div class="col-lg-3 col-md-6 col-6">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1050">
-              <a href="assets/img/gallery/f84-2.webp" class="gallery-lightbox"
-                data-description="FARLIGHT 84">
+              <a href="assets/img/gallery/f84-2.webp" class="gallery-lightbox" data-description="FARLIGHT 84">
                 <img src="assets/img/gallery/f84-2.webp" alt="" class="img-fluid">
               </a>
             </div>
@@ -1243,16 +1236,26 @@
 
   <!-- Sweet alert -->
   <script>
-    // Fungsi untuk menampilkan SweetAlert2 dengan penundaan 1 detik
+    // Fungsi untuk menampilkan SweetAlert2 dengan penundaan 1 jam
     function showPromoAlert() {
-      setTimeout(function () {
-        Swal.fire({
-          title: 'PROMO HARGA CHEAT !!!',
-          text: 'Cek di menu harga untuk mengetahui promo promonya.',
-          icon: 'warning',
-          confirmButtonText: 'OK'
-        });
-      }, 5000); // Penundaan selama 5 detik (5000 milidetik)
+      // Ambil waktu terakhir alert ditampilkan dari localStorage
+      var lastAlertTime = localStorage.getItem('lastAlertTime');
+      // Ambil waktu saat ini
+      var currentTime = new Date().getTime();
+
+      // Periksa apakah alert belum pernah ditampilkan atau sudah 1 jam sejak terakhir ditampilkan
+      if (!lastAlertTime || (currentTime - lastAlertTime) > 3600000) { // 3600000 milidetik = 1 jam
+        setTimeout(function () {
+          Swal.fire({
+            title: 'PROMO HARGA CHEAT !!!',
+            text: 'Cek di menu harga untuk mengetahui promo promonya.',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+          });
+          // Set waktu terakhir alert ditampilkan
+          localStorage.setItem('lastAlertTime', currentTime);
+        }, 5000); // Penundaan selama 5 detik (5000 milidetik) sebelum alert muncul
+      }
     }
 
     // Panggil fungsi showPromoAlert saat dokumen selesai dimuat
