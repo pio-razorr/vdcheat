@@ -515,6 +515,23 @@ h6 {
   background: #ec000084;
 }
 
+#hero .btn-get-order {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #00b5ec;
+}
+
+#hero .btn-get-order:hover {
+  background: #00b5ec7a;
+}
+
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
   width: 100%;
