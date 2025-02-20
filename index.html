@@ -32,6 +32,9 @@
 
   <link rel="stylesheet" href="assets/compiled/css/table-datatable-jquery.css">
 
+  <!-- Sweet Alert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+
 </head>
 
 <body>
@@ -1157,8 +1160,8 @@
               <tr>
                 <td class="auto-increment"></td>
                 <td>Township</td>
-                <td>30 Kupon Muat<img class="ms-2" src="assets/img/township/Load-Coupon.webp" alt="Kupon Muat"
-                    srcset="" width="30"></td>
+                <td>30 Kupon Muat<img class="ms-2" src="assets/img/township/Load-Coupon.webp" alt="Kupon Muat" srcset=""
+                    width="30"></td>
                 <td>Rp. 10.000</td>
               </tr>
 
@@ -2110,6 +2113,60 @@
       class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
+
+
+  <!-- Sweet Alert -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fungsi untuk menampilkan SweetAlert2
+      function showAlert() {
+        Swal.fire({
+          title: 'Promo Ramadhan',
+          text: 'Diskon 20% all cheat game, gasskeun order or perpanjangnya 🔥',
+          imageUrl: "assets/img/sambutan.webp",
+          imageWidth: 400,
+          imageHeight: 200,
+          confirmButtonText: 'Gasskeun',
+          didOpen: () => {
+            Swal.getConfirmButton().focus()
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '#penawaran';
+          }
+        });
+      }
+
+      // Cek apakah alert sudah pernah ditampilkan dalam satu jam terakhir
+      if (localStorage.getItem('alertSudahDitampilkan')) {
+        // Jika alert sudah pernah ditampilkan
+        const waktuTerakhirDitampilkan = localStorage.getItem('waktuAlertDitampilkan');
+        const sekarang = new Date().getTime();
+        const selisihWaktu = sekarang - waktuTerakhirDitampilkan;
+        const satuJam = 60 * 60 * 1000; // Satu jam dalam milidetik
+
+        if (selisihWaktu > satuJam) {
+          // Jika sudah lebih dari satu jam sejak terakhir ditampilkan
+          localStorage.setItem('alertSudahDitampilkan', 'true');
+          localStorage.setItem('waktuAlertDitampilkan', sekarang);
+          showAlert(); // Tampilkan alert
+        }
+      } else {
+        // Jika alert belum pernah ditampilkan
+        localStorage.setItem('alertSudahDitampilkan', 'true');
+        localStorage.setItem('waktuAlertDitampilkan', new Date().getTime());
+        showAlert(); // Tampilkan alert
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
   <!-- Datatable -->
   <script src="assets/extensions/jquery/jquery.min.js"></script>
   <script src="assets/extensions/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -2122,6 +2179,9 @@
       $('#daftar-harga').DataTable();
     });
   </script>
+
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
